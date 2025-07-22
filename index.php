@@ -15,9 +15,9 @@ $username = $loggedIn ? htmlspecialchars($_SESSION['username']) : '';
   <div class="sidebar">
     <h2>Toryemocji</h2>
     <ul>
-      <li>🏠 Strona główna</li>
+      <li><a herf="index.php">🏠 Strona główna</a></li>
       <li>📋 Ankiety</li>
-      <li>💬 Komunikator</li>
+      <li><a href="pages/komunikator.php">💬 Komunikator</a></li>
     </ul>
   </div>
 
