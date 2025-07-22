@@ -2,7 +2,6 @@
 <html lang="pl">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Toryemocji - Logowanie</title>
   <link rel="stylesheet" href="../styles/styles.css" />
 </head>
@@ -11,28 +10,31 @@
     <h2>Toryemocji</h2>
     <ul>
       <li><a href="../index.html">🏠 Strona główna</a></li>
-      <li><a href="create.html">📋 Ankiety</a></li>
-      <li><a href="login.html">🔐 Logowanie</a></li>
-      <li><a href="register.html">🆕 Rejestracja</a></li>
+      <li><a href="ankiety.html">📋 Ankiety</a></li>
+      <li><a href="komunikator.html">💬 Komunikator</a></li>
     </ul>
   </div>
 
   <div class="main-content">
     <header>
-      <h1>Logowanie</h1>
+      <div class="auth-links">
+        <a href="login.html">🔐 Logowanie</a>
+        <a href="register.html">🆕 Rejestracja</a>
+      </div>
     </header>
 
-    <form action="#" method="post">
-      <label for="email">Email:</label><br />
-      <input type="email" id="email" name="email" required /><br /><br />
+    <section>
+      <h2>Logowanie</h2>
+      <form action="../backend/login.php" method="POST">
+        <label for="email">Email:</label><br />
+        <input type="email" id="email" name="email" required /><br /><br />
 
-      <label for="password">Hasło:</label><br />
-      <input type="password" id="password" name="password" required /><br /><br />
+        <label for="haslo">Hasło:</label><br />
+        <input type="password" id="haslo" name="haslo" required /><br /><br />
 
-      <button type="submit">Zaloguj się</button>
-    </form>
+        <button type="submit">Zaloguj się</button>
+      </form>
+    </section>
   </div>
-
-  <script src="../scripts/script.js"></script>
 </body>
 </html>
