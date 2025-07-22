@@ -46,7 +46,7 @@ body {
 /* Linki w pasku bocznym */
 .sidebar a {
   color: #ccc;
-  text-decoration: none;
+  text-decoration: none;          /* a to usuwa to linie to podkreslenie brzytkiw w swensie*/
   display: inline-block;
   width: 100%;
   transition: color 0.3s;
@@ -55,7 +55,7 @@ body {
 .sidebar a:hover {
   color: #fff;
 }
-
+/* usuwat fioletowy kolor to jak cos */
 .sidebar a:visited {               
   color: #ccc;
 }
@@ -207,10 +207,6 @@ header {
 .login-box button:hover {
   background-color: #3091dd;
 }
-
-/* =======================
-   KOMUNIKATOR - MODYFIKACJA
-========================== */
 
 .chat-container {
   background-color: rgba(255, 255, 255, 0.9);
