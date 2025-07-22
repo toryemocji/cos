@@ -52,7 +52,7 @@ $username = $loggedIn ? htmlspecialchars($_SESSION['username']) : '';
 
   <script>
   function loadMessages() {
-    fetch('../backend/get_messages.php')
+    fetch('../backend/get_message.php')
       .then(res => res.json())
       .then(data => {
         const box = document.getElementById('chat-box');
