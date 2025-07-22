@@ -35,19 +35,20 @@ $username = $loggedIn ? htmlspecialchars($_SESSION['username']) : '';
       </div>
     </header>
 
-    <section class="chat-container" style="margin: 2em;">
+    <section class="chat-container">
       <h2>💬 Komunikator</h2>
-      <div id="chat-box" style="height: 300px; overflow-y: scroll; border: 1px solid #ccc; padding: 1em; background: #fff;"></div>
+      <div id="chat-box"></div>
 
       <?php if ($loggedIn): ?>
-      <form id="chat-form" style="margin-top: 1em;">
-        <input type="text" id="message" placeholder="Napisz wiadomość..." required style="width: 70%;" />
+      <form id="chat-form" autocomplete="off">
+        <input type="text" id="message" placeholder="Napisz wiadomość..." required autocomplete="off" />
         <button type="submit">Wyślij</button>
       </form>
       <?php else: ?>
         <p>Musisz być <a href="login.html">zalogowany</a>, aby korzystać z komunikatora.</p>
       <?php endif; ?>
     </section>
+
   </div>
 
   <script>
