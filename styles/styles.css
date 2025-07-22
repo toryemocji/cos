@@ -207,3 +207,50 @@ header {
 .login-box button:hover {
   background-color: #3091dd;
 }
+
+.chat-container {
+  background-color: #f9f9f9;
+  padding: 2em;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 2em auto;
+}
+
+#chat-box {
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  padding: 1em;
+  border-radius: 8px;
+  height: 300px;
+  overflow-y: scroll;
+  font-family: monospace;
+  font-size: 14px;
+}
+
+#chat-form {
+  display: flex;
+  gap: 1em;
+  margin-top: 1em;
+}
+
+#chat-form input[type="text"] {
+  flex: 1;
+  padding: 0.5em;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+#chat-form button {
+  padding: 0.5em 1em;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+#chat-form button:hover {
+  background-color: #0056b3;
+}
