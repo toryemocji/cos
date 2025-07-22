@@ -8,17 +8,23 @@
 body {
   display: flex;
   background-color: #181818;
+  background-image: url("zdj/zdj2.jpg"); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   color: #fff;
   height: 100vh;
   overflow: hidden;
 }
 
-.sidebar {
+
+.sidebar { /*pasek boczny*/
   width: 200px;
   background-color: #202020;
   height: 100vh;
   padding: 20px;
   position: fixed;
+   opacity: 0.85;
 }
 
 .sidebar h2 {
@@ -57,7 +63,7 @@ header {
   margin-bottom: 20px;
 }
 
-.search {
+.search {                     /*pasek wyszukiwania*/
   flex-grow: 1;
   max-width: 400px;
   padding: 10px;
@@ -66,6 +72,10 @@ header {
   border: 1px solid #333;
   border-radius: 20px;
   margin-right: 20px;
+  opacity: 0.85;
+}
+.search:hover {
+  transform: scale(1.02);
 }
 
 .auth-links {
@@ -88,9 +98,9 @@ header {
   border-color: #3ea6ff;
 }
 
-.ankiet-grid {
+.ankiet-grid { /*ankiety*/
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 20px;
   flex-grow: 1;
 }
@@ -101,6 +111,7 @@ header {
   border-radius: 8px;
   transition: transform 0.2s;
   cursor: pointer;
+   opacity: 0.85;
 }
 
 .card:hover {
