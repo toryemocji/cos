@@ -17,35 +17,54 @@ body {
   overflow: hidden;
 }
 
-
-.sidebar { /*pasek boczny*/
+/* SIDEBAR */
+.sidebar {
   width: 200px;
   background-color: #202020;
   height: 100vh;
   padding: 20px;
   position: fixed;
-   opacity: 0.85;
+  opacity: 0.85;
 }
 
 .sidebar h2 {
   margin-bottom: 20px;
+  color: #fff;
 }
 
 .sidebar ul {
   list-style: none;
+  padding-left: 0;
 }
 
 .sidebar ul li {
-  padding: 12px 0;
-  cursor: pointer;
+  padding: 10px 15px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+/* Linki w pasku bocznym */
+.sidebar a {
   color: #ccc;
+  text-decoration: none;          /* a to usuwa to linie to podkreslenie brzytkiw w swensie*/
+  display: inline-block;
+  width: 100%;
   transition: color 0.3s;
 }
 
-.sidebar ul li:hover {
+.sidebar a:hover {
   color: #fff;
 }
+/* usuwat fioletowy kolor to jak cos */
+.sidebar a:visited {               
+  color: #ccc;
+}
 
+.sidebar ul li:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* MAIN */
 .main-content {
   margin-left: 200px;
   padding: 20px;
@@ -63,7 +82,7 @@ header {
   margin-bottom: 20px;
 }
 
-.search {                     /*pasek wyszukiwania*/
+.search {
   flex-grow: 1;
   max-width: 400px;
   padding: 10px;
@@ -74,10 +93,12 @@ header {
   margin-right: 20px;
   opacity: 0.85;
 }
+
 .search:hover {
   transform: scale(1.02);
 }
 
+/* LINKI LOGOWANIA */
 .auth-links {
   display: flex;
   gap: 15px;
@@ -98,7 +119,8 @@ header {
   border-color: #3ea6ff;
 }
 
-.ankiet-grid { /*ankiety*/
+/* ANKIETY */
+.ankiet-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 20px;
@@ -111,7 +133,7 @@ header {
   border-radius: 8px;
   transition: transform 0.2s;
   cursor: pointer;
-   opacity: 0.85;
+  opacity: 0.85;
 }
 
 .card:hover {
@@ -128,7 +150,7 @@ header {
   font-size: 14px;
 }
 
-
+/* LOGIN */
 .login-container {
   flex-grow: 1;
   display: flex;
