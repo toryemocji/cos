@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Toryemocji - Rejestracja</title>
+  <link rel="stylesheet" href="../styles/styles.css" />
+</head>
+<body>
+  <div class="sidebar">
+    <h2>Toryemocji</h2>
+    <ul>
+      <li>🏠 <a href="../index.html">Strona główna</a></li>
+      <li>📋 <a href="ankiety.html">Ankiety</a></li>
+      <li>💬 <a href="komunikator.html">Komunikator</a></li>
+    </ul>
+  </div>
+
+  <div class="main-content">
+    <header>
+      <input type="text" placeholder="Szukaj w Toryemocji..." class="search" />
+      <div class="auth-links">
+        <a href="login.html">🔐 Logowanie</a>
+        <a href="register.html">🆕 Rejestracja</a>
+      </div>
+    </header>
+
+    <section>
+      <h2>Rejestracja</h2>
+      <form>
+        <label for="username">Nazwa użytkownika:</label><br />
+        <input type="text" id="username" name="username" required /><br /><br />
+
+        <label for="email">Email:</label><br />
+        <input type="email" id="email" name="email" required /><br /><br />
+
+        <label for="password">Hasło:</label><br />
+        <input type="password" id="password" name="password" required /><br /><br />
+
+        <button type="submit">Zarejestruj się</button>
+      </form>
+    </section>
+  </div>
+</body>
+</html>
