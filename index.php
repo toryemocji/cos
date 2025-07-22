@@ -9,7 +9,7 @@ $username = $loggedIn ? htmlspecialchars($_SESSION['username']) : '';
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Toryemocji - Strona główna</title>
-  <link rel="stylesheet" href="styles/styles.css" />
+  <link rel="stylesheet" href="styles/styles.css?v=123" />
 </head>
 <body>
   <div class="sidebar">
