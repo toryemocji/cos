@@ -1,6 +1,5 @@
 <?php
 session_start();
-
 if (!isset($_SESSION['username'])) {
     http_response_code(403);
     echo "Brak dostępu";
@@ -16,7 +15,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (!empty($message)) {
         $stmt = $pdo->prepare("INSERT INTO messages (username, message) VALUES (?, ?)");
         $stmt->execute([$username, $message]);
+        echo "OK";
+    } else {
+        http_response_code(400);
+        echo "Wiadomość jest pusta";
     }
 }
 ?>
-
