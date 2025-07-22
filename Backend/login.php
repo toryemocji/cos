@@ -11,7 +11,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($user && password_verify($password, $user['password'])) {
         echo "Zalogowano pomyślnie!";
-        // Możesz tu ustawić sesję itd.
     } else {
         echo "Nieprawidłowe dane logowania.";
     }
