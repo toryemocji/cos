@@ -12,7 +12,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt = $pdo->prepare("INSERT INTO users (username, email, password) VALUES (?, ?, ?)");
         try {
             $stmt->execute([$username, $email, $hashed]);
-            echo "Rejestracja zakończona sukcesem!";
+
+            echo "<p>Jesteś zarejestrowany!</p>";
+            echo '<meta http-equiv="refresh" content="2;url=/index.html">';
         } catch (PDOException $e) {
             echo "Błąd: " . $e->getMessage();
         }
