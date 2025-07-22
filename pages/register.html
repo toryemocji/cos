@@ -23,22 +23,23 @@
       </div>
     </header>
 
-    <section>
-      <h2>Rejestracja</h2>
-      <form action="../backend/register.php" method="POST">
-        <label for="username">Nazwa użytkownika:</label><br />
-        <input type="text" id="username" name="username" required /><br /><br />
+    <section class="login-container">
+      <div class="login-box">
+        <h2>🆕 Rejestracja</h2>
+        <form action="../backend/register.php" method="POST">
+          <label for="username">Nazwa użytkownika:</label>
+          <input type="text" id="username" name="username" required />
 
-        <label for="email">Email:</label><br />
-        <input type="email" id="email" name="email" required /><br /><br />
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
 
-        <label for="password">Hasło:</label><br />
-        <input type="password" id="password" name="password" required /><br /><br />
+          <label for="password">Hasło:</label>
+          <input type="password" id="password" name="password" required />
 
-        <button type="submit">Zarejestruj się</button>
-      </form>
+          <button type="submit">Zarejestruj się</button>
+        </form>
+      </div>
     </section>
   </div>
 </body>
 </html>
-

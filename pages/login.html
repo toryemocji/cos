@@ -23,17 +23,19 @@
       </div>
     </header>
 
-    <section>
-      <h2>Logowanie</h2>
-      <form action="../backend/login.php" method="POST">
-        <label for="email">Email:</label><br />
-        <input type="email" id="email" name="email" required /><br /><br />
+    <section class="login-container">
+      <div class="login-box">
+        <h2>🔐 Logowanie</h2>
+        <form action="../backend/login.php" method="POST">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
 
-        <label for="haslo">Hasło:</label><br />
-        <input type="password" id="haslo" name="haslo" required /><br /><br />
+          <label for="haslo">Hasło:</label>
+          <input type="password" id="haslo" name="haslo" required />
 
-        <button type="submit">Zaloguj się</button>
-      </form>
+          <button type="submit">Zaloguj się</button>
+        </form>
+      </div>
     </section>
   </div>
 </body>

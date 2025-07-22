@@ -116,3 +116,60 @@ header {
   color: #aaa;
   font-size: 14px;
 }
+
+/* Styl logowania */
+.login-container {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-box {
+  background-color: #2a2a2a;
+  padding: 30px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+.login-box h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.login-box form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-box label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.login-box input {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 8px;
+  background-color: #1c1c1c;
+  color: #fff;
+  border: 1px solid #444;
+}
+
+.login-box button {
+  padding: 10px;
+  background-color: #3ea6ff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.login-box button:hover {
+  background-color: #3091dd;
+}
