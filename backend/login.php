@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once 'config.php';
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
@@ -11,7 +12,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $user = $stmt->fetch();
 
         if ($user && password_verify($password, $user['password'])) {
-            echo "✅ Zalogowano pomyślnie jako " . htmlspecialchars($user['username']) . "!";
+            // ✅ Zalogowano – zapisz do sesji i przekieruj
+            $_SESSION['username'] = $user['username'];
+            $_SESSION['email'] = $user['email'];
+            header("Location: /index.php");
+            exit;
         } else {
             echo "❌ Nieprawidłowy email lub hasło.";
         }
@@ -21,4 +26,4 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 } else {
     echo "❌ Niewłaściwa metoda żądania.";
 }
-?>
+
