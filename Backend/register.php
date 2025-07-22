@@ -9,7 +9,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($username && $email && $password) {
         $hashed = password_hash($password, PASSWORD_DEFAULT);
 
-        // Dodajemy email do INSERT
         $stmt = $pdo->prepare("INSERT INTO users (username, email, password) VALUES (?, ?, ?)");
         try {
             $stmt->execute([$username, $email, $hashed]);
@@ -20,5 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         echo "Podaj nazwę użytkownika, email i hasło.";
     }
+} else {
+    echo "Metoda żądania musi być POST.";
 }
 ?>

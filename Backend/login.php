@@ -1,18 +1,24 @@
 <?php
 require_once 'config.php';
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $username = trim($_POST['username'] ?? '');
-    $password = trim($_POST['password'] ?? '');
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    $email = trim($_POST['email'] ?? '');
+    $password = trim($_POST['haslo'] ?? '');
 
-    $stmt = $pdo->prepare("SELECT * FROM users WHERE username = ?");
-    $stmt->execute([$username]);
-    $user = $stmt->fetch();
+    if (!empty($email) && !empty($password)) {
+        $stmt = $pdo->prepare("SELECT * FROM users WHERE email = ?");
+        $stmt->execute([$email]);
+        $user = $stmt->fetch();
 
-    if ($user && password_verify($password, $user['password'])) {
-        echo "Zalogowano pomyślnie!";
+        if ($user && password_verify($password, $user['password'])) {
+            echo "✅ Zalogowano pomyślnie jako " . htmlspecialchars($user['username']) . "!";
+        } else {
+            echo "❌ Nieprawidłowy email lub hasło.";
+        }
     } else {
-        echo "Nieprawidłowe dane logowania.";
+        echo "⚠️ Wypełnij wszystkie pola.";
     }
+} else {
+    echo "❌ Niewłaściwa metoda żądania.";
 }
 ?>
